@@ -1,3 +1,7 @@
+package data;
+
+import data.Person;
+
 public class Student extends Person {
 
 //    String firstName;
@@ -5,14 +9,14 @@ public class Student extends Person {
 //    int age;
     private String section;
 
-    Student (String firstName, String lastName, int age, String section){
+    public Student (String firstName, String lastName, int age, String section){
         super (firstName, lastName, age);
         super.setStatus("Uczeń");
         this.section = section;
     }
 
     @Override
-    void printInfo(){
+    public void printInfo(){
         super.printInfo();
         System.out.print("Klasa: " + section);
     }
